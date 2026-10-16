@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Barang</title>
+</head>
+<body>
+
+    <center>
+        <h3>A Web Page</h3>
+        <hr>
+
+        <table border="1" cellpadding="10">
+            <tr>
+                <td><a href="#">Home</a></td>
+                <td><a href="#">Register</a></td>
+                <td><a href="#">Policy</a></td>
+                <td><a href="#">About</a></td>
+            </tr>
+        </table>
+    </center>
+
+    <br><br>
+
+    <table align="center" cellpadding="10">
+        <tr>
+            <!-- Kotak Foto Barang -->
+            <td valign="top" width="280">
+                <img
+                    src="/praktikum02/image.jpg"
+                    alt="Foto Lenovo Legion 9i"
+                    width="150"
+                    height="150"
+                >
+            </td>
+
+            <!-- Informasi Barang dan Form Pembayaran -->
+            <td valign="top">
+
+                <table cellpadding="5">
+                    <tr>
+                        <td>Title Here</td>
+                        <td>:</td>
+                        <td>Lenovo Legion 9i</td>
+                    </tr>
+
+                    <tr>
+                        <td valign="top">Description</td>
+                        <td valign="top">:</td>
+                        <td>
+                            Year : 2025<br>
+                            Model : Laptop Gaming<br>
+                            Condition : New
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Total Amount</td>
+                        <td>:</td>
+                        <td>€ 5.466,29 </td>
+                    </tr>
+
+                    <tr>
+                        <td>Pay to</td>
+                        <td>:</td>
+                        <td>123-456-789-0</td>
+                    </tr>
+
+                    <tr>
+                        <td>Payment Type</td>
+                        <td>:</td>
+                        <td>
+                            <select name="payment">
+                                <option>Visa Debit</option>
+                                <option>Mastercard</option>
+                                <option>Bank Transfer</option>
+                                <option>E-Wallet</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Account Holder</td>
+                        <td>:</td>
+                        <td>
+                            <input
+                                type="text"
+                                name="account_holder"
+                                value="Name Here"
+                                size="35"
+                            >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Account No</td>
+                        <td>:</td>
+                        <td>
+                            <input
+                                type="text"
+                                name="account_number"
+                                value="123-456-789-0"
+                                size="45"
+                            >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3">
+                            <input
+                                type="checkbox"
+                                name="send_phone"
+                                checked
+                            >
+                            Send to Mobile Phone
+                            <br>
+
+                            <input
+                                type="checkbox"
+                                name="send_email"
+                                checked
+                            >
+                            Email me copy of transaction
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Send to Mobile Phone</td>
+                        <td>:</td>
+                        <td>
+                            <input
+                                type="tel"
+                                name="mobile_phone"
+                                value="1234567890, 1234567891"
+                                size="35"
+                            >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Send to Email</td>
+                        <td>:</td>
+                        <td>
+                            <input
+                                type="email"
+                                name="email"
+                                value="Who@gmail.com"
+                                size="35"
+                            >
+                        </td>
+                    </tr>
+                </table>
+
+                <br><br>
+
+                <center>
+                    <button type="submit">
+                        Pay using QuadLink
+                    </button>
+                </center>
+
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+</body>
+</html>
