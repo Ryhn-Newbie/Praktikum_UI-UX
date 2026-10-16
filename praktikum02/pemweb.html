@@ -1,170 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Pemesanan Barang</title>
+    <title>Order Form & Confirmation</title>
 </head>
+
 <body>
 
-    <center>
-        <h3>A Web Page</h3>
-        <hr>
-
-        <table border="1" cellpadding="10">
-            <tr>
-                <td><a href="#">Home</a></td>
-                <td><a href="#">Register</a></td>
-                <td><a href="#">Policy</a></td>
-                <td><a href="#">About</a></td>
-            </tr>
-        </table>
-    </center>
-
-    <br><br>
-
-    <table align="center" cellpadding="10">
+    <!-- NAVIGASI UTAMA -->
+    <table width="100%" border="1" cellpadding="8" cellspacing="0">
         <tr>
-            <!-- Kotak Foto Barang -->
-            <td valign="top" width="280">
-                <img
-                    src="/praktikum02/image.jpg"
-                    alt="Foto Lenovo Legion 9i"
-                    width="150"
-                    height="150"
-                >
-            </td>
-
-            <!-- Informasi Barang dan Form Pembayaran -->
-            <td valign="top">
-
-                <table cellpadding="5">
-                    <tr>
-                        <td>Title Here</td>
-                        <td>:</td>
-                        <td>Lenovo Legion 9i</td>
-                    </tr>
-
-                    <tr>
-                        <td valign="top">Description</td>
-                        <td valign="top">:</td>
-                        <td>
-                            Year : 2025<br>
-                            Model : Laptop Gaming<br>
-                            Condition : New
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Total Amount</td>
-                        <td>:</td>
-                        <td>€ 5.466,29 </td>
-                    </tr>
-
-                    <tr>
-                        <td>Pay to</td>
-                        <td>:</td>
-                        <td>123-456-789-0</td>
-                    </tr>
-
-                    <tr>
-                        <td>Payment Type</td>
-                        <td>:</td>
-                        <td>
-                            <select name="payment">
-                                <option>Visa Debit</option>
-                                <option>Mastercard</option>
-                                <option>Bank Transfer</option>
-                                <option>E-Wallet</option>
-                            </select>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Account Holder</td>
-                        <td>:</td>
-                        <td>
-                            <input
-                                type="text"
-                                name="account_holder"
-                                value="Name Here"
-                                size="35"
-                            >
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Account No</td>
-                        <td>:</td>
-                        <td>
-                            <input
-                                type="text"
-                                name="account_number"
-                                value="123-456-789-0"
-                                size="45"
-                            >
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="3">
-                            <input
-                                type="checkbox"
-                                name="send_phone"
-                                checked
-                            >
-                            Send to Mobile Phone
-                            <br>
-
-                            <input
-                                type="checkbox"
-                                name="send_email"
-                                checked
-                            >
-                            Email me copy of transaction
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Send to Mobile Phone</td>
-                        <td>:</td>
-                        <td>
-                            <input
-                                type="tel"
-                                name="mobile_phone"
-                                value="1234567890, 1234567891"
-                                size="35"
-                            >
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>Send to Email</td>
-                        <td>:</td>
-                        <td>
-                            <input
-                                type="email"
-                                name="email"
-                                value="Who@gmail.com"
-                                size="35"
-                            >
-                        </td>
-                    </tr>
-                </table>
-
-                <br><br>
-
-                <center>
-                    <button type="submit">
-                        Pay using QuadLink
-                    </button>
-                </center>
-
+            <td align="center">
+                <a href="/praktikum02/pemweb.html">Home</a> &nbsp;|&nbsp;
+                <a href="/praktikum02/hasilpemesanan_pemweb.html">Generate Link</a>
+                &nbsp;|&nbsp;
+                <a href="#">Transaction History</a> &nbsp;|&nbsp;
+                <a href="#">Policy</a> &nbsp;|&nbsp;
+                <a href="#">Logout</a>
             </td>
         </tr>
     </table>
 
-    <hr>
+    <br><br>
 
-</body>
-</html>
+    <!-- 1. FORM PEMESANAN Iphone (ORDER FORM) -->
+    <h2 align="center">Order Form - Product Link Generator</h2>
+
+    <form action="/praktikum02/hasilpemesanan_pemweb.html" method="POST">
+        <table width="100%" border="0" cellpadding="8">
+            <tr>
+                <!-- Kolom Kiri: Upload Gambar Produk -->
+                <td width="30%" valign="top" align="center">
+                        <figure>
+                            <img src="/praktikum02/image.jpg" alt="Lenovo Legion 9i" width="160" height="160"
+                                border="1" />
+                        </figure>
+                </td>
+
+                <!-- Kolom Kanan: Field Input Form -->
+                <td width="70%">
+                    <table width="100%" border="0" cellpadding="4">
+                        <tr>
+                            <td width="25%"><label for="title"><strong>Title Here:</strong></label></td>
+                            <td width="75%"><input type="text" id="title" name="title" value="Lenovo Legion 9i"
+                                    size="45"></td>
+                        </tr>
+                        <tr>
+                            <td valign="top"><label for="description"><strong>Description:</strong></label></td>
+                            <td>
+                                <textarea id="description" name="description" rows="4" cols="44">Year: 2025
+Model: Laptop Gaming
+Condition: New</textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="account_number"><strong>Account Number:</strong></label></td>
+                            <td><input type="text" id="account_number" name="account_number" value="123-456-789-0"
+                                    size="45"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="bank"><strong>Bank:</strong></label></td>
+                            <td>
+                                <select id="bank" name="bank">
+                                    <option value="Bitcoin" selected>Bitcoin</option>
+                                    <option value="BNI">Debit</option>
+                                    <option value="BCA">Bank Transfer</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="account_holder"><strong>Account Holder:</strong></label></td>
+                            <td><input type="text" id="account_holder" name="account_holder" value="Rehan" size="45">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="transaction"><strong>Transaction:</strong></label></td>
+                            <td>
+                                <select id="transaction" name="transaction">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3" selected>3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <br>
+                                <small><em>* If the transaction is for 3 persons, choose 3 from the drop-down
+                                        list</em></small>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="checkbox" id="send_mobile_check" name="send_mobile_check" checked>
+                                <label for="send_mobile_check">Send to Mobile Phone</label><br>
+
+                                <input type="checkbox" id="send_email_check" name="send_email_check" checked>
+                                <label for="send_email_check">Send to Email</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="mobile_phone"><strong>Send to Mobile Phone:</strong></label></td>
+                            <td><input type="text" id="mobile_phone" name="mobile_phone" value="081211232150" size="45">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="email"><strong>Send to Email:</strong></label></td>
+                            <td><input type="text" id="email" name="email" value="r3h4n77@gmail.com" size="45">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <br>
+                                <input type="submit" value="Generate Web Link">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <hr size="3" color="black" style="margin: 40px 0;">
