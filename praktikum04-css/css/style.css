@@ -1,0 +1,241 @@
+body {
+    background-color: #f9f3db; /* Warna latar belakang krem terang */
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 25px;
+}
+
+/* Styling untuk bagian header */
+#header {
+    background-color: #deb887; /* Warna latar coklat/krem gelap */
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+}
+
+#header h1 {
+    color: #0000ff; /* Warna judul biru */
+    font-size: 24px;
+    margin-top: 0;
+}
+
+#header blockquote {
+    background-color: #ffd700; /* Warna latar kutipan kuning */
+    margin: 10px auto 0;
+    padding: 10px;
+    width: 80%;
+    font-size: 14px;
+    color: #000;
+    border: 1px dotted #666;
+    border-radius: 4px;
+}
+
+#soekarno {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Styling untuk Menu Navigasi */
+.menu ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    background-color: #4a3b32;
+    border-radius: 0 0 8px 8px;
+}
+
+.menu ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+/* Styling untuk layout gambar */
+.gambar {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gambar img {
+    width: 200px; /* Sesuaikan ukuran gambar */
+    height: 200px;
+    object-fit: cover;
+    margin: 0 5px;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Memberikan efek bingkai bayangan */
+    border-radius: 6px;
+}
+
+/* Styling untuk isi artikel */
+.isi {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+/* Membuat efek Drop Cap (Huruf Besar) pada awal paragraf */
+.isi p:first-of-type::first-letter {
+    font-size: 50px;
+    color: #0000ff;
+    float: left;
+    margin-right: 8px;
+    margin-top: -5px;
+    line-height: 1;
+}
+
+/* Styling tambahan agar elemen bawah tetap rapi */
+h3 {
+    margin-top: 30px;
+}
+
+/* =========================================
+   STYLING BAGIAN BAWAH (KONTEN & PROMO) 
+   ========================================= */
+
+#profil, #beternak {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+/* Memperbaiki list pada Profil agar menurun (tidak menyamping seperti menu) */
+#profil ul {
+    list-style-type: disc; /* Menampilkan kembali bullet point */
+    text-align: justify;
+    padding-left: 20px;
+    margin: 0;
+}
+
+#profil ul li {
+    display: list-item; /* Mengubah kembali menjadi list menurun */
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Styling untuk bagian Cara Beternak */
+#beternak {
+    margin-top: 20px;
+}
+
+#beternak ol {
+    padding-left: 20px;
+    margin: 0;
+}
+
+#beternak ol li {
+    margin-bottom: 15px;
+}
+
+#beternak h4 {
+    margin: 0 0 5px 0;
+    color: #0000ff; /* Judul poin berwarna biru agar serasi */
+}
+
+#beternak p {
+    margin: 0;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Styling untuk Galeri / Koleksi 4 Gambar */
+.koleksi {
+    text-align: center;
+    margin: 30px 0;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.koleksi img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    margin: 5px;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Memberikan efek bingkai bayangan */
+    border-radius: 6px;
+}
+
+/* Styling untuk kotak Promo / Penawaran */
+.promo {
+    background-color: #ffffcc; /* Latar belakang kuning muda */
+    border: 2px dashed #ff9900; /* Garis putus-putus oranye */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.promo h2 {
+    color: #cc0000;
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.promo del {
+    color: #888; /* Warna abu-abu untuk harga coret */
+}
+
+.promo strong {
+    color: #008000; /* Warna hijau menonjol untuk harga diskon */
+    font-size: 26px;
+}
+
+#Wa {
+    background-color: #25d366; /* Warna hijau khas WhatsApp */
+    color: white;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* Menata tombol link eCommerce (Tokopedia, Bukalapak, Shopee) */
+.promo ol {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.promo ol li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.promo ol li a {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.promo ol li a:hover {
+    background-color: #f0f0f0;
+    color: #0000ff;
+}
